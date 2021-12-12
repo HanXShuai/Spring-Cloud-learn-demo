@@ -1,6 +1,7 @@
 package com.hans.provide.payment.service;
 
-import com.hans.provide.payment.entities.Payment;
+
+import com.hans.common.entities.Payment;
 
 /**
  * @Author: hans

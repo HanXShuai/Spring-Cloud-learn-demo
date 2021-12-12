@@ -4,7 +4,7 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.hans.provide.payment.dao.IPaymentDao">
 
-    <resultMap id="baseResultMap" type="com.hans.provide.payment.entities.Payment">
+    <resultMap id="baseResultMap" type="com.hans.common.entities.Payment">
         <id column="id" property="id" jdbcType="BIGINT"></id>
         <id column="serial" property="serial" jdbcType="VARCHAR"></id>
         <id column="description" property="description" jdbcType="VARCHAR"></id>
@@ -14,7 +14,7 @@
         select id,serial,description from payment where id = #{id}
     </select>
 
-    <insert id="createPayment" parameterType="com.hans.provide.payment.entities.Payment" useGeneratedKeys="true" keyProperty="id">
+    <insert id="createPayment" parameterType="com.hans.common.entities.Payment" useGeneratedKeys="true" keyProperty="id">
         insert into payment (serial,description) values (#{serial},#{description})
     </insert>
 

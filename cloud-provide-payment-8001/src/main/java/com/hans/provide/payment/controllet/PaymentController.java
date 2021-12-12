@@ -1,7 +1,7 @@
 package com.hans.provide.payment.controllet;
 
-import com.hans.provide.payment.entities.CommonResult;
-import com.hans.provide.payment.entities.Payment;
+import com.hans.common.entities.CommonResult;
+import com.hans.common.entities.Payment;
 import com.hans.provide.payment.service.IPaymentService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.*;
  * @Date: 2021/12/11 17:38
  */
 @RestController
+@RequestMapping("/payment")
 @Slf4j
 public class PaymentController {
     @Autowired
@@ -23,7 +24,6 @@ public class PaymentController {
 
     @PostMapping("/create")
     public CommonResult createPayment(@RequestBody Payment payment) {
-        log.info("paymrnt : {}", payment.toString());
         Long result = paymentService.createPayment(payment);
         log.info("result : {}", result);
         if (result > 0) {

@@ -1,7 +1,7 @@
 package com.hans.provide.payment.service.impl;
 
+import com.hans.common.entities.Payment;
 import com.hans.provide.payment.dao.IPaymentDao;
-import com.hans.provide.payment.entities.Payment;
 import com.hans.provide.payment.service.IPaymentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

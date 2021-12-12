@@ -1,4 +1,4 @@
-package com.hans.provide.payment.entities;
+package com.hans.common.entities;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -8,7 +8,7 @@ import java.io.Serializable;
 
 /**
  * @Author: hans
- * @Date: 2021/12/11 17:40
+ * @Date: 2021/12/12 15:44
  */
 @Data
 @AllArgsConstructor

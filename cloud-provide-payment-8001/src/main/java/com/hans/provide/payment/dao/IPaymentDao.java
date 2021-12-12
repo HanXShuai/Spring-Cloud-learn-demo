@@ -1,6 +1,6 @@
 package com.hans.provide.payment.dao;
 
-import com.hans.provide.payment.entities.Payment;
+import com.hans.common.entities.Payment;
 import org.apache.ibatis.annotations.Mapper;
 
 /**
