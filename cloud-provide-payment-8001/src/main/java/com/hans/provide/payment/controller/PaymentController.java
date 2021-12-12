@@ -1,4 +1,4 @@
-package com.hans.provide.payment.controllet;
+package com.hans.provide.payment.controller;
 
 import com.hans.common.entities.CommonResult;
 import com.hans.common.entities.Payment;
@@ -27,7 +27,7 @@ public class PaymentController {
         Long result = paymentService.createPayment(payment);
         log.info("result : {}", result);
         if (result > 0) {
-            return new CommonResult(200, "insert success", result);
+            return new CommonResult(200, "insert success : " + port, result);
         } else {
             return new CommonResult(500, "insert fail", null);
         }
@@ -37,7 +37,7 @@ public class PaymentController {
     public CommonResult queryPaymentById(@PathVariable Long id) {
         Payment payment = paymentService.queryPaymentById(id);
         if (payment != null) {
-            return new CommonResult(200, "insert success", payment);
+            return new CommonResult(200, "insert success : " + port, payment);
         } else {
             return new CommonResult(500, "insert fail", null);
         }

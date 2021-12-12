@@ -1,5 +1,5 @@
 server:
-  port: 8001
+  port: 8002
 
 spring:
   application:
@@ -17,9 +17,9 @@ eureka:
     service-url:
       defaultZone: http://eureka7002.com:7002/eureka/,http://eureka7001.com:7001/eureka/
   instance:
-    #    修改主机名
-    instance-id: payment8001
-    #    显示ip地址
+#    修改主机名
+    instance-id: payment8002
+#    显示ip地址
     prefer-ip-address: true
 
 mybatis:
