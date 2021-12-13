@@ -10,5 +10,10 @@ eureka:
     #   表示自己端就是注册中心。只维护服务实例，并不去检索服务
     fetch-registry: false
     service-url:
+#      单机版
 #      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+#      集群
       defaultZone: http://eureka7002.com:7002/eureka/
+  server:
+    #    关闭自我保护
+    enable-self-preservation: false
