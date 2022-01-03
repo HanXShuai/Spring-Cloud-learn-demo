@@ -1,0 +1,25 @@
+server:
+  port: 80
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://eureka7002.com:7002/eureka/,http://eureka7001.com:7001/eureka/
+  instance:
+    #    修改主机名
+    instance-id: consumer80
+    #    显示ip地址
+    prefer-ip-address: true
+
+spring:
+  application:
+    name: feign-consumer-order-80
+
+ribbon:
+  ReadTimeout: 5000
+
+logging:
+  level:
+    com.hans.feignn.consumer.order.service.FeignService: debug
