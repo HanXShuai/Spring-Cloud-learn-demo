@@ -1,0 +1,30 @@
+server:
+  port: 8001
+
+spring:
+  application:
+    name: provider-payment
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: 123456
+    url: jdbc:mysql://127.0.0.1:3306/hans_spring_cloud_demo?useUnicode=true&characterEncoding=utf8&useSSL=false
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://eureka7002.com:7002/eureka/,http://eureka7001.com:7001/eureka/
+  instance:
+    #    修改主机名
+    instance-id: hystrix-payment8001
+    #    显示ip地址
+    prefer-ip-address: true
+
+mybatis:
+  mapper-locations: classpath:/mapper/mapper-*.xml
+  type-aliases-package: com.hans.provide.payment.entities
+logging:
+  level:
+    com.hans.provide.payment.dao: debug

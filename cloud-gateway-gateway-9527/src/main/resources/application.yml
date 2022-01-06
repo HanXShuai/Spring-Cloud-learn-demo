@@ -20,7 +20,12 @@ spring:
     gateway:
       routes:
         # This route rule used to forward request to activity server
-        - id: payment-rout
+        - id: payment-rout1
           uri: http://localhost:8001
           predicates:
             - Path=/payment/get/**
+
+        - id: payment-rout2
+          uri: http://localhost:8001
+          predicates:
+              - Path=/payment/lb/**
