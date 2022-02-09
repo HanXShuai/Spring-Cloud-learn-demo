@@ -1,0 +1,19 @@
+server:
+  port: 3355
+
+spring:
+  application:
+    name: config-clent
+  cloud:
+    config:
+      label: master
+      name: config
+      profile: dev
+      uri: http://localhost:3344/
+
+#暴露监控的端口
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
